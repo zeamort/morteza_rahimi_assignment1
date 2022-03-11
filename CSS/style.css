@@ -1,0 +1,131 @@
+/*Assigning the more intuitive box-sizing model (border-box)*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*Remove all pre-assigned margins*/
+* {
+    margin: 0;
+}
+
+/*Allow percentage based heights in my application*/
+html, body {
+    height: 100%;
+}
+
+/*Add accessible line-height and improve text rendering*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*Better media defaults*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*Remove built-in form typography styles*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*Avoid text overflow*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*Create a root stacking context*/
+#root, #__next {
+    isolation: isolate;
+}
+
+
+
+/*Start of my CSS*/
+
+/*Declare and initialize color variables*/
+:root {
+    --main-bg-color: #F2E9E1;
+    --secondary-bg-color: #E0DEF4;
+    --main-text-color: #56949F;
+    --secondary-text-color: #D7827E;
+}
+
+/*Assign default font family and font color.*/
+*{
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--main-text-color);
+}
+
+/*Set background color.*/
+body {
+    background: var(--main-bg-color);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+/*Have the side nav take up a fifth of the horizontal space.*/
+.side-nav {
+    width: 20%;
+}
+
+/*Ensure all the content (minus the side navigation) utilizes the rest of the available horizontal space.*/
+.main-content {
+    width:100%;
+}
+
+/*Stick the top-nav to always be at the top of the screen, even when scrolling*/
+.top-nav {
+    position: sticky;
+    top: 0;
+}
+
+/*style the top-nav using flex. Align the links to the right end of the page.*/
+.top-nav ul {
+    height: 30px;
+    margin-right: 20px;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*Removes the underline from navigation links*/
+.nav-links a {
+    text-decoration: none;
+}
+
+/*Remove the bullet points list style for navigation list items.*/
+.side-nav ul, .top-nav ul {
+    list-style-type: none;
+}
+
+/*Remove the border and background color that comes default with buttons.*/
+button {
+    border:none;
+    background: none;
+}
+
+/*style the button positions*/
+#new-note-button {
+    margin: 15%;
+}
+#open-side-nav, #close-side-nav {
+    margin-top: 3rem;
+}
+
+/*These two classes in conjunction with one another will result in the footer always being at the bottom of the page.*/
+.footer-container {
+    display: flex;
+    min-height: 100hv;
+    flex-direction: column;
+}
+.position-footer {
+    flex: 1;
+}
+
+/*Center my footer text*/
+footer {
+    text-align: center;
+}

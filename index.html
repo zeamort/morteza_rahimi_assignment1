@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
+    <title>Homepage</title>
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Docs</a></li>
-        </ul>
-    </nav>
-    <section>
-        <button type="menu">>></button>
-        <button type="button">+ create a new note</button>
+    <div class="main-content footer-container">
+        <nav class="top-nav">
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Docs</a></li>
+            </ul>
+        </nav>
+        <main class="home-main position-footer">
+            <button id="new-note-button" type="button">+ create a new note</button>
+        </main>
+        <footer>
+            <p>created by Morteza Rahimi</p>
+        </footer>
+    </div>
 
-    </section>
-    <footer>
-        <p>created by Morteza Rahimi</p>
-    </footer>
+    <nav class="side-nav">
+        <button id="open-side-nav" type="menu">>></button>
+    </nav>
 </body>
 </html>

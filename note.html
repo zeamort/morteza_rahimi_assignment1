@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
+    <title>Note</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Docs</a></li>
-        </ul>
-    </nav>
-    <section>
-        <button type="button">+</button>
-        <textarea name="note" id="note" cols="20" rows="30" placeholder="your note here"></textarea>
-    </section>
-    <aside>
-        <button type="menu"><<</button>
+    <div class="main-content footer-container">
+        <nav class="top-nav">
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Docs</a></li>
+            </ul>
+        </nav>
+        <main class="position-footer">
+            <button type="button">+</button>
+            <textarea name="note" id="note" cols="40" rows="10" placeholder="your note here"></textarea>
+        </main>
+        <footer>
+            <p>created by Morteza Rahimi</p>
+        </footer>
+    </div>
+    <nav class="side-nav">
+        <button id="close-side-nav" type="menu"><<</button>
         <p>my notes</p>
-        <ul>
+        <ul class="nav-links">
             <li><a href="#">note one</a></li>
             <li><a href="#">note two</a></li>
         </ul>
-    </aside>
-    <footer>
-        <p>created by Morteza Rahimi</p>
-    </footer>
+    </nav>
 </body>
 </html>

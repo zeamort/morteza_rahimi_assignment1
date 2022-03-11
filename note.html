@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <title>Note</title>
 </head>
-<body>
+<body class="side-nav-flex-container">
     <div class="main-content footer-container">
         <nav class="top-nav">
             <ul class="nav-links">
@@ -18,21 +18,29 @@
                 <li><a href="#">Docs</a></li>
             </ul>
         </nav>
-        <main class="position-footer">
-            <button type="button">+</button>
-            <textarea name="note" id="note" cols="40" rows="10" placeholder="your note here"></textarea>
+        <main class="note-main position-footer">
+            <div class="style-button-textarea">
+                <button type="button">+</button>
+                <textarea name="note" id="note" cols="40" rows="10" placeholder="your note here"></textarea>
+            </div>
+            <div>
+                <button>save</button>
+                <button id="style-delete-button">delete</button>
+            </div>
         </main>
         <footer>
             <p>created by Morteza Rahimi</p>
         </footer>
     </div>
     <nav class="side-nav">
-        <button id="close-side-nav" type="menu"><<</button>
-        <p>my notes</p>
-        <ul class="nav-links">
-            <li><a href="#">note one</a></li>
-            <li><a href="#">note two</a></li>
-        </ul>
+        <button type="menu"><<</button>
+        <div class="side-nav-body">
+            <p>my notes</p>
+            <ul class="nav-links">
+                <li><a href="#">note one</a></li>
+                <li><a href="#">note two</a></li>
+            </ul>
+        </div>
     </nav>
 </body>
 </html>

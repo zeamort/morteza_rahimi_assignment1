@@ -45,8 +45,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /*Declare and initialize color variables*/
 :root {
-    --main-bg-color: #F2E9E1;
-    --secondary-bg-color: #E0DEF4;
+    --main-bg-color:#f8e2ce ;
+    --secondary-bg-color: #f5f0e7;
     --main-text-color: #56949F;
     --secondary-text-color: #D7827E;
 }
@@ -60,19 +60,22 @@ p, h1, h2, h3, h4, h5, h6 {
 /*Set background color.*/
 body {
     background: var(--main-bg-color);
+}
+
+.side-nav-flex-container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
 }
 
-/*Have the side nav take up a fifth of the horizontal space.*/
+/*Side nav style.*/
 .side-nav {
-    width: 20%;
+    background-color: var(--secondary-bg-color);
 }
 
 /*Ensure all the content (minus the side navigation) utilizes the rest of the available horizontal space.*/
 .main-content {
-    width:100%;
+    flex-grow:1;
 }
 
 /*Stick the top-nav to always be at the top of the screen, even when scrolling*/
@@ -101,18 +104,65 @@ body {
     list-style-type: none;
 }
 
+.side-nav {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.side-nav-body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px;
+}
+
+.side-nav-body p {
+    color: black;
+} 
+
 /*Remove the border and background color that comes default with buttons.*/
 button {
     border:none;
     background: none;
 }
 
-/*style the button positions*/
-#new-note-button {
-    margin: 15%;
+/*remove the textarea border and change its background color to our secondary color.*/
+textarea {
+    border: none;
+    background: var(--secondary-bg-color)
 }
-#open-side-nav, #close-side-nav {
-    margin-top: 3rem;
+
+/*use flexbox to position the sidenav button above the create new note button*/
+.home-main {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*style the new note button to take up half of the empty space and center itself within it.*/
+#new-note-button {
+    flex-grow: 0.5;
+    align-self: center;
+}
+
+/*use flexbox to position the new note button and textarea above the save and delete buttons and center them all.*/
+.note-main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*use flexbox to align the new note button with the top of the textarea*/
+.style-button-textarea {
+    display:flex;
+    align-items: flex-start;
+}
+
+/*make our delete button be our secondary text color*/
+#style-delete-button {
+    color: var(--secondary-text-color);
 }
 
 /*These two classes in conjunction with one another will result in the footer always being at the bottom of the page.*/

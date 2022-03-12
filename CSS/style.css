@@ -43,10 +43,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /*Declare and initialize color variables*/
 :root {
-    --main-bg-color: #1f1d2e; /*#f8e2ce*/
-    --secondary-bg-color: #faf4ed;
-    --main-text-color: #56949F;
-    --secondary-text-color: #D7827E;
+    --main-bg-color: #31748f;
+    --main-text-color: #f4ede8;
+    --secondary-color-dark: #191724;
 }
 
 /*Assign default font family and font color.*/
@@ -59,8 +58,6 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
     background: var(--main-bg-color);
 }
-
-
 
 /*Stick the top-nav to always be at the top of the screen, even when scrolling*/
 .top-nav {
@@ -88,12 +85,14 @@ body {
     list-style-type: none;
 }
 
+/*Use flexbox to organize sidenav elements and position them to the right */
 .side-nav {
     display:flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
+/*Use flexbox to organize sidenav link elements*/
 .side-nav-body {
     display:flex;
     flex-direction: column;
@@ -101,9 +100,13 @@ body {
     padding:30px;
 }
 
+/*assign contrasting colors to side nav elements*/
 .side-nav-body p {
-    color: var(--main-bg-color);
-} 
+    color: var(--secondary-color-dark)
+}
+.side-nav-body a, .side-nav button {
+    color: var(--main-bg-color)
+}
 
 /*Remove the border and background color that comes default with buttons.*/
 button {
@@ -111,10 +114,11 @@ button {
     background: none;
 }
 
-/*remove the textarea border and change its background color to our secondary color.*/
+/*remove the textarea border and change its font and background color.*/
 textarea {
     border: none;
-    background: var(--secondary-bg-color)
+    background: var(--main-text-color);
+    color: var(--main-bg-color);
 }
 
 /*use flexbox to position the sidenav button above the create new note button*/
@@ -142,11 +146,6 @@ textarea {
 .style-button-textarea {
     display:flex;
     align-items: flex-start;
-}
-
-/*make our delete button be our secondary text color*/
-#style-delete-button {
-    color: var(--secondary-text-color);
 }
 
 /*These two classes in conjunction with one another will result in the footer always being at the bottom of the page.*/
@@ -188,5 +187,5 @@ footer {
 
 /*Side nav style.*/
     .side-nav {
-        background-color: var(--secondary-bg-color);
+        background-color: var(--main-text-color);
     }

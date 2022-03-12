@@ -2,5 +2,5 @@
 
 ## link to my color palette
 
-[my color palette](https://colors.dopely.top/palette-generator/hyLb3CuZL83)
+[my color palette](https://colors.dopely.top/palette-generator/CxXrvz5W8ob)
 

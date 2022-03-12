@@ -39,14 +39,12 @@ p, h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 }
 
-
-
 /*Start of my CSS*/
 
 /*Declare and initialize color variables*/
 :root {
-    --main-bg-color:#f8e2ce ;
-    --secondary-bg-color: #f5f0e7;
+    --main-bg-color: #1f1d2e; /*#f8e2ce*/
+    --secondary-bg-color: #faf4ed;
     --main-text-color: #56949F;
     --secondary-text-color: #D7827E;
 }
@@ -62,21 +60,7 @@ body {
     background: var(--main-bg-color);
 }
 
-.side-nav-flex-container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-}
 
-/*Side nav style.*/
-.side-nav {
-    background-color: var(--secondary-bg-color);
-}
-
-/*Ensure all the content (minus the side navigation) utilizes the rest of the available horizontal space.*/
-.main-content {
-    flex-grow:1;
-}
 
 /*Stick the top-nav to always be at the top of the screen, even when scrolling*/
 .top-nav {
@@ -118,7 +102,7 @@ body {
 }
 
 .side-nav-body p {
-    color: black;
+    color: var(--main-bg-color);
 } 
 
 /*Remove the border and background color that comes default with buttons.*/
@@ -178,4 +162,31 @@ textarea {
 /*Center my footer text*/
 footer {
     text-align: center;
+    padding: 10px;
 }
+
+/*Going to handle the configuration of the flexbox for the side navigation container differently based on the condition of width pixel count. We don't want the side navigation to be on the side when width is less than 650px.*/
+@media screen and (min-width: 650px) {
+    .side-nav-flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 650px) {
+    .side-nav-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    }
+}
+
+/*Ensure all the content (minus the side navigation) utilizes the rest of the available horizontal space.*/
+    .main-content {
+        flex-grow:1;
+    }
+
+/*Side nav style.*/
+    .side-nav {
+        background-color: var(--secondary-bg-color);
+    }
